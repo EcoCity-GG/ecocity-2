@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-City - Sobre o Projeto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <style>
+        /* Estilos específicos para a página Sobre, se necessário */
+        .secao-sobre {
+            padding: 80px 0;
+            background-color: #f8f9fa; /* Um cinza claro de fundo */
+        }
+        .secao-sobre h2 {
+            font-weight: 700;
+            color: var(--verde-escuro);
+            margin-bottom: 50px;
+            position: relative;
+            text-align: center;
+        }
+        .secao-sobre h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--azul-agua);
+            border-radius: 2px;
+        }
+        .card-beneficio-detalhe {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: transform 0.3s;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .card-beneficio-detalhe:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .card-beneficio-detalhe .icone {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--verde-principal);
+        }
+        .card-beneficio-detalhe h3 {
+            color: var(--verde-escuro);
+            margin-bottom: 15px;
+        }
+        .ods-destaque {
+            background-color: var(--verde-principal);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 60px;
+            box-shadow: 0 15px 30px rgba(46, 139, 87, 0.2);
+        }
+        .ods-destaque h3 {
+            color: white;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .ods-destaque p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand logo-container" href="../index.html">
+                    <img src="../img/LOGO-SITE.png" alt="Logo Eco-City" class="logo">
+                    <h1 class="logo-text">Eco<span>City</span></h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Início</a>
+                        </li>
+                            <a class="nav-link" href="mapa.html">Mapa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/sobre.html">Sobre</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <a href="login.html" class="btn btn-outline-verde me-2">Login</a>
+                        <a href="cadastro.html" class="btn btn-verde">Cadastre-se</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="secao-sobre">
+        <div class="container">
+            <h2>Sobre o EcoCity: Uma Solução Sustentável e Lucrativa para Presidente Prudente</h2>
+            <p class="lead text-center mb-5">
+                No Eco-City, acreditamos que o desenvolvimento econômico e a sustentabilidade ambiental devem caminhar juntos. Nosso projeto oferece uma plataforma inovadora que conecta empresas locais a oportunidades de impacto socioambiental positivo, gerando benefícios mútuos e transformando Presidente Prudente em um exemplo de cidade verde.
+            </p>
+
+            <div class="row text-center mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card-beneficio-detalhe">
+                        <div class="icone"><i class="fas fa-eye"></i></div>
+                        <h3>Visibilidade e Reputação</h3>
+                        <p>Empresas engajadas na sustentabilidade são vistas com melhores olhos por consumidores e parceiros. Dados da Nielsen (2018) mostram que **81% dos consumidores globais** preferem marcas sustentáveis. Ao adotar uma zona, sua empresa ganha destaque em nossa plataforma e em ações de mídia, fortalecendo sua imagem como líder responsável em Prudente.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-beneficio-detalhe">
+                        <div class="icone"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3>Lucratividade e Vantagem Competitiva</h3>
+                        <p>A sustentabilidade não é um custo, mas um investimento. Empresas com práticas ESG (Ambiental, Social e Governança) tendem a apresentar melhor desempenho financeiro. Estudos da Harvard Business Review indicam que empresas sustentáveis podem ter **margens de lucro até 28% maiores**. Reduza custos operacionais com eficiência energética e uso consciente de recursos, enquanto atrai um mercado consumidor cada vez mais consciente.</p>
+                </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-beneficio-detalhe">
+                        <div class="icone"><i class="fas fa-calculator"></i></div>
+                        <h3>Redução de Impostos e Incentivos</h3>
+                        <p>Nós trabalhamos para facilitar o acesso a benefícios fiscais para empresas que investem em projetos ambientais. Embora os incentivos variem, a legislação municipal e federal oferece deduções e isenções que podem **reduzir significativamente a carga tributária**. Nossos especialistas podem orientar sobre as melhores oportunidades para sua empresa, transformando seu investimento verde em economia direta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card-beneficio-detalhe">
+                        <div class="icone"><i class="fas fa-chart-line"></i></div>
+                        <h3>Atração de Talentos e Retenção</h3>
+                        <p>Profissionais, especialmente as novas gerações, buscam empregadores com propósito. **70% dos millennials** consideram o engajamento de uma empresa em causas sociais ao decidir onde trabalhar (Deloitte, 2021). Atrair e reter talentos de alta performance torna-se mais fácil ao demonstrar um compromisso real com a comunidade e o meio ambiente.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-beneficio-detalhe">
+                        <div class="icone"><i class="fas fa-users-cog"></i></div>
+                        <h3>Engajamento Comunitário</h3>
+                        <p>Seja parte ativa da transformação de Presidente Prudente. A adoção de zonas verdes não só embeleza a cidade, mas cria espaços de convívio e melhora a qualidade de vida. Isso gera um senso de pertencimento e orgulho local, fortalecendo o laço entre sua empresa e a comunidade prudenteense.</p>
+                </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-beneficio-detalhe">
+                        <div class="icone"><i class="fas fa-globe-americas"></i></div>
+                        <h3>Impacto Socioambiental Mensurável</h3>
+                        <p>Nosso projeto permite que sua empresa veja o impacto direto de suas ações. Seja na recuperação de áreas degradadas, plantio de árvores ou criação de espaços de lazer, oferecemos relatórios e métricas que comprovam seu contributo para um futuro mais verde e sustentável, alinhando-se às metas globais de desenvolvimento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ods-destaque mt-5">
+                <h3>Nosso Compromisso com a ODS 11: Cidades e Comunidades Sustentáveis</h3>
+                <p>
+                    O projeto **Eco-City** está intrinsecamente alinhado com o **Objetivo de Desenvolvimento Sustentável (ODS) 11 da ONU**, que visa tornar as cidades e os assentamentos humanos inclusivos, seguros, resilientes e sustentáveis.
+                </p>
+                <p>
+                    Ao possibilitar a adoção e manutenção de áreas verdes em Presidente Prudente, contribuímos diretamente para as metas da ODS 11, como a melhoria da **qualidade do ar**, a criação de **espaços públicos seguros e acessíveis** e a promoção da **sustentabilidade ambiental urbana**. Nossas ações fortalecem a resiliência da cidade frente aos desafios climáticos e promovem um ambiente mais saudável para todos os cidadãos.
+                </p>
+                <p>
+                    Junte-se a nós para construir uma Presidente Prudente mais verde, sustentável e preparada para o futuro, deixando um legado positivo para as próximas gerações.
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <img src="../img/LOGO-SITE.png" alt="Logo Eco-City" class="logo-rodape">
+                    <p class="text-white-50">Transformando Presidente Prudente em uma cidade mais verde e sustentável através da colaboração entre empresas e comunidade.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="../index.html#sobre">Sobre</a></li>
+                        <li><a href="mapa.html">Mapa</a></li>
+                        <li><a href="../index.html#beneficios">Benefícios</a></li>
+                        <li><a href="../index.html#contato">Contato</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Av. Presidente Prudente, 123</li>
+                        <li><i class="fas fa-phone me-2"></i> (18) 3900-0000</li>
+                        <li><i class="fas fa-envelope me-2"></i> contato@ecocity.com.br</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h3>Redes Sociais</h3>
+                    <div class="redes-sociais">
+                        <a href="#" class="icone-social"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icone-social"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icone-social"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="icone-social"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm">Seja um Parceiro</a>
+                    </div>
+                </div>
+            </div>
+            <div class="direitos">
+                <p>© 2023 Eco-City - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chatbot-container">
+        <button class="chatbot-button" id="chatbotButton" aria-label="Abrir chatbot">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <i class="fas fa-leaf"></i>
+                    <h3>EcoBot Assistente</h3>
+                </div>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Fechar chatbot">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Digite sua mensagem..." aria-label="Digite sua mensagem">
+                <button id="chatbotSend" aria-label="Enviar mensagem">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="../js/principal.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

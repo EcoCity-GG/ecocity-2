@@ -1,0 +1,582 @@
+:root {
+    --verde-principal: #2E8B57;
+    --verde-secundario: #228B22;
+    --azul-agua: #20B2AA;
+    --bege: #F5F5DC;
+    --marrom: #8B4513;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bege);
+    color: #333;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px 0;
+}
+
+.logo {
+    height: 50px;
+}
+
+.btn-verde {
+    background-color: var(--verde-principal);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-verde:hover {
+    background-color: var(--verde-secundario);
+    color: white;
+}
+
+.btn-outline-verde {
+    border: 2px solid var(--verde-principal);
+    color: var(--verde-principal);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-outline-verde:hover {
+    background-color: var(--verde-principal);
+    color: white;
+}
+
+.banner {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.banner h1 {
+    color: var(--verde-principal);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sobre, .mapa, .beneficios, .contato {
+    padding: 60px 0;
+}
+
+.sobre h2, .mapa h2, .beneficios h2, .contato h2 {
+    color: var(--verde-principal);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.mapa-container {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-filtro {
+    background-color: white;
+    border: 1px solid var(--verde-principal);
+    color: var(--verde-principal);
+}
+
+.btn-filtro.ativo {
+    background-color: var(--verde-principal);
+    color: white;
+}
+
+.card-beneficio {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.card-beneficio .icone {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contato {
+    background-color: white;
+}
+
+.rodape {
+    background-color: var(--verde-principal);
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.logo-rodape {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.rodape a {
+    color: white;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 15px;
+}
+
+.icone-social {
+    font-size: 1.5rem;
+}
+
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#botao-chatbot {
+    background-color: var(--verde-principal);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.chatbot-conteudo {
+    display: none;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.chatbot-cabecalho {
+    background-color: var(--verde-principal);
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#fechar-chatbot {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.chatbot-mensagens {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.chatbot-entrada {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+.chatbot-entrada input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+}
+
+.chatbot-entrada button {
+    background-color: var(--verde-principal);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        text-align: center;
+        padding: 30px 0;
+    }
+    
+    .banner img {
+        margin-top: 30px;
+    }
+    
+    .filtros {
+        flex-wrap: wrap;
+    }
+}
+
+/* Adicione no final do arquivo estilo.css */
+
+/* Estilos para o mapa */
+.mapa-container {
+    height: 500px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.leaflet-container {
+    font-family: 'Arial', sans-serif;
+}
+
+.leaflet-popup-content {
+    min-width: 200px;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+}
+
+.leaflet-popup-content .btn-verde {
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilos para os filtros */
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-filtro {
+    background-color: white;
+    border: 1px solid var(--verde-principal);
+    color: var(--verde-principal);
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.btn-filtro.ativo {
+    background-color: var(--verde-principal);
+    color: white;
+}
+
+.btn-filtro:hover {
+    background-color: var(--verde-secundario);
+    color: white;
+}
+
+/* Adicione ao seu arquivo CSS existente */
+
+/* Estilos para o VLibras */
+.vw-plugin-top-wrapper {
+    z-index: 1000 !important;
+}
+
+/* Painel do Mapa */
+.mapa-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.controles-mapa {
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mapa-container {
+    height: 500px;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Correção para o Leaflet */
+.leaflet-container {
+    background-color: #fff !important;
+    font-family: 'Arial', sans-serif;
+}
+
+.leaflet-control-attribution {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Legenda */
+.legenda {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.legenda.verde {
+    background-color: #2E8B57;
+}
+
+.legenda.azul {
+    background-color: #20B2AA;
+}
+
+.info-zonas {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .mapa-container {
+        height: 400px;
+    }
+    
+    .controles-mapa {
+        margin-top: 20px;
+    }
+}
+
+/* Estilo para os popups do Leaflet */
+.popup-mapa {
+    font-family: 'Arial', sans-serif;
+    min-width: 200px;
+}
+
+.popup-mapa h4 {
+    color: var(--verde-principal);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.popup-mapa p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.popup-mapa .btn-verde {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 8px !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2) !important;
+}
+
+.leaflet-popup-tip {
+    box-shadow: none !important;
+}
+
+/* Mapa Fixo */
+.mapa-fixo-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.mapa-fixo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Zonas no mapa */
+.zona {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.ponto-zona {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px currentColor;
+}
+
+.zona.verde .ponto-zona {
+    background-color: var(--verde-principal);
+    color: var(--verde-principal);
+}
+
+.zona.azul .ponto-zona {
+    background-color: var(--azul-agua);
+    color: var(--azul-agua);
+}
+
+.info-zona {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.zona:hover .info-zona {
+    opacity: 1;
+    visibility: visible;
+    margin-bottom: 5px;
+}
+
+.info-zona h5 {
+    color: var(--verde-principal);
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.info-zona p {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.info-zona .btn {
+    margin-top: 10px;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+}
+
+/* Lista de zonas */
+.lista-zonas {
+    margin-top: 20px;
+}
+
+.zona-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.zona-item:hover {
+    background-color: #f0f0f0;
+}
+
+.indicador {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.indicador.verde {
+    background-color: var(--verde-principal);
+}
+
+.indicador.azul {
+    background-color: var(--azul-agua);
+}
+
+.zona-info h5 {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    color: #333;
+}
+
+.zona-info p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .mapa-fixo-container {
+        height: 400px;
+    }
+    
+    .info-zona {
+        width: 180px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilos para a página de login */
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #ddd !important;
+}
+
+.btn-social img {
+    transition: transform 0.3s ease;
+}
+
+.btn-social:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsividade para a página de login */
+@media (max-width: 576px) {
+    .login-container {
+        padding: 1rem;
+    }
+    
+    .login-header {
+        padding: 1.5rem;
+    }
+    
+    .login-body {
+        padding: 1.5rem;
+    }
+}

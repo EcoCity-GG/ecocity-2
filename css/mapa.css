@@ -1,0 +1,104 @@
+/* Arquivo: css/mapa-estilos.css */
+
+/* ... (seus estilos existentes para .controles-mapa, .rodape, etc.) ... */
+
+/* Estilos para o contêiner da imagem do mapa e os pontos */
+.mapa-estatico-wrapper {
+    position: relative; /* FUNDAMENTAL para posicionar os pontos */
+    display: inline-block; /* Para que o wrapper se ajuste ao tamanho da imagem */
+    width: 100%; /* Ocupa a largura total disponível */
+    overflow: hidden; /* Garante que os pontos não saiam do contêiner da imagem */
+    border-radius: 10px; /* Mantém o border-radius do card-body */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Mantém a sombra */
+}
+
+#mapa-estatico-img {
+    display: block; /* Remove o espaço extra abaixo da imagem */
+    max-width: 100%; /* Garante que a imagem não transborde */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Aplica o border-radius na imagem */
+}
+
+/* Estilos para os pontos das zonas */
+.ponto-zona {
+    position: absolute;
+    width: 20px; /* Tamanho do círculo */
+    height: 20px; /* Tamanho do círculo */
+    border-radius: 50%; /* Torna-o um círculo */
+    border: 2px solid white; /* Borda branca para destaque */
+    cursor: pointer;
+    transform: translate(-50%, -50%); /* Centraliza o ponto na posição (top, left) */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    z-index: 10; /* Garante que os pontos fiquem acima da imagem */
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Sombra para destacar */
+}
+
+.ponto-zona:hover {
+    transform: translate(-50%, -50%) scale(1.2); /* Aumenta no hover */
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+/* Cores dos pontos baseadas no status */
+.ponto-zona.adotada {
+    background-color: var(--verde-principal); /* Verde */
+}
+.ponto-zona.disponivel {
+    background-color: var(--azul-agua); /* Azul */
+}
+.ponto-zona.pendente {
+    background-color: #FFA500; /* Laranja */
+}
+.ponto-zona.inelegivel {
+    background-color: #808080; /* Cinza */
+}
+
+/* Estilo para o Tooltip/Popup simulado */
+.mapa-tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    white-space: nowrap; /* Impede a quebra de linha */
+    z-index: 100; /* Acima dos pontos */
+    pointer-events: none; /* Permite clicar nos elementos por baixo */
+    transform: translate(-50%, -110%); /* Posiciona acima do ponto */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0; /* Escondido por padrão */
+}
+
+/* Cores dos indicadores de status na legenda (se for manter, estilize aqui) */
+/* Se a legenda for apenas visual no HTML, estas classes podem ser reusadas */
+.status-zona { /* Reutiliza as classes de status existentes */
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    font-size: 0.85em;
+}
+
+.status-adotada { background-color: var(--verde-principal); color: white; }
+.status-disponivel { background-color: var(--azul-agua); color: white; }
+.status-pendente { background-color: #FFA500; color: white; }
+.status-inelegivel { background-color: #808080; color: white; }
+
+/* ... (as regras de html, body, main e outras do seu CSS original) ... */
+
+html, body {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+
+body {
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+main {
+    flex-grow: 1; 
+}
